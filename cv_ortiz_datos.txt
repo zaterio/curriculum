@@ -155,6 +155,22 @@ ignaciofigueroa@itingenieria.cl
 > Subgerente desarrollo multiplataforma, Canal 13 / Contacto técnico recurrente CHV
 ieyara@13.cl
 
+# Alexis Farfán
+> Jefe de Desarrollo de Plataformas Tecnológicas, CHV
+alexisfarfan@chilevision.cl
+
+# Benjamín Ortúzar
+> Contacto técnico - Hardware y bases de datos, CHV
+bortuzar@chilevision.cl
+
+# Alfredo Luco Díaz
+> Gerente de Innovación / Tecnología / Director, Altavoz
+aluco@altavoz.net
+
+# Eduardo Alarcón Gauché
+> Jefe de Desarrollo, Altavoz
+ealarcon@altavoz.net
+
 # Juan Carlos Aguirre Melo
 > Jefe de desarrollo Ingeniería, Canal 13
 jcaguirre@13.cl | 22514000
