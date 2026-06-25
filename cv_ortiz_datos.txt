@@ -78,9 +78,9 @@ Sistema Django + Celery + RabbitMQ + Ansible para monitoreo y gestión remota de
 > 2024-2025 // ARAUCO Chile
 Sistema de video-análisis en tiempo real: detección de camiones con YOLOv11, OCR de patentes con PaddleOCR, dashboard HLS, API FastAPI y despliegue con Ansible.
 
-# Forest Landing Strip
-> 2024-2025 // ARAUCO Chile
-Backend Django/Celery para monitoreo de pistas de aterrizaje forestales: detección de aeronaves con YOLO, OCR de registros, verificación de EPP (casco/chaleco) y reportes operacionales.
+# Forest Landing Strip - Monitoreo de Pistas con IA
+> 2024-2026 // ARAUCO Chile / IT Ingeniería Ltda.
+Sistema de IA automatizado para monitoreo de pistas de aterrizaje forestales: detección de aeronaves con YOLO, OCR de matrículas, control de carga de agua, verificación de EPP (casco/chaleco) y reportes operacionales. Desarrollado en conjunto con IT Ingeniería Ltda. (David Morales Vidal, Cesar Arismendi, Diego Sandoval). Servicio operativo hasta abril de 2026, actualmente en espera de nuevos requerimientos vinculados a IA de trenes.
 
 # Arauco Models
 > 2024-2025 // ARAUCO Chile
@@ -90,12 +90,16 @@ Entrenamiento de modelos YOLO/SAM2 para detectar aeronaves, personas y EPPs en v
 > 2024-2025 // Infraestructura propia
 Playbooks Ansible para deploy de servidor RTSP/RTMP MediaMTX con soporte VOD, publicación remota y aceleración NVIDIA/VAAPI.
 
-# Modelo Trenes
-> 2024-2025 // Industria forestal
-Entrenamiento YOLO11 para clasificar vagones forestales cargados/vacíos y locomotoras desde cámaras laterales.
+# IA de Trenes - Monitoreo Ferroviario
+> 2025-2026 // ARAUCO Chile / IT Ingeniería Ltda.
+Sistema de IA para monitoreo de tráfico ferroviario mediante cámaras instaladas en pistas (cancha El Ciruelo), detectando vagones cargados de madera y otros materiales. Desarrollo avanzado durante marzo de 2026 en conjunto con IT Ingeniería Ltda. (David Morales Vidal, Cesar Arismendi).
+
+# Monitoreo Remoto de Temperatura
+> 2026 // IT Ingeniería Ltda.
+Sistema de monitoreo sin contacto para subestaciones eléctricas mediante cámaras biespectrales, orientado a detectar anomalías térmicas y prevenir fallas o incendios. Proyecto iniciado en febrero de 2026 en conjunto con IT Ingeniería Ltda. (David Morales Vidal, Key Account Manager).
 
 # Trenes Tags
-> 2024-2025 // Industria forestal
+> 2025-2026 // Industria forestal
 Pipeline de pre-procesamiento de videos ferroviarios: extracción de frames, deduplicación y generación automática de etiquetas YOLO para Roboflow.
 
 # Dell 5548 Automation
