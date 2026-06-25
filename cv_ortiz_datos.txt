@@ -1,5 +1,5 @@
 @nombre Daniel Ortiz
-@titulo Senior DevOps | SysAdmin | Backend | CyberSec
+@titulo Senior DevOps | SysAdmin | Backend | CyberSec | Computer Vision & AI for Video
 @email daniel.ortiz@zka.cl
 @experiencia +15 años de experiencia
 @ubicacion Chile
@@ -8,7 +8,9 @@
 [Perfil Ejecutivo]
 Profesional senior informático con **alta experiencia en Python, Django y Go**, respaldada por más de @experiencia diseñando, construyendo y escalando aplicaciones backend robustas, seguras y de alto rendimiento. Especialista en el ecosistema Python/Django (REST APIs, microservicios, arquitecturas limpias) y en Go para servicios de alta concurrencia, baja latencia y herramientas de infraestructura.
 
-Complementa su perfil backend con sólida trayectoria en arquitectura de infraestructura, automatización con Ansible, orquestación de contenedores, pipelines CI/CD, entornos Linux/Proxmox, ciberseguridad defensiva y seguridad de redes. Trayectoria respaldada por la gestión de centenares de VMs/contenedores en producción, migraciones desde hipervisores propietarios hacia soluciones open source, despliegue de IDS/IPS, WAF, firewalls iptables/nftables, y desarrollo de plataformas críticas adquiridas por empresas nacionales.
+Experto en **Computer Vision & IA para video**, con trayectoria sólida en detección y seguimiento de objetos con YOLO/SAM2, OCR (PaddleOCR/Tesseract), procesamiento de video con FFmpeg/GStreamer, inferencia acelerada en GPU con ONNX Runtime/TensorRT, y transcodificación con mejora por IA (Real-ESRGAN, DnCNN, ESPCN). Ha liderado sistemas de video-análisis en tiempo real para monitoreo ferroviario, pistas de aterrizaje forestales, lectura de patentes, control de calidad broadcast y análisis térmico de infraestructura crítica.
+
+Complementa su perfil backend y computer vision con sólida trayectoria en arquitectura de infraestructura, automatización con Ansible, orquestación de contenedores, pipelines CI/CD, entornos Linux/Proxmox, ciberseguridad defensiva y seguridad de redes. Trayectoria respaldada por la gestión de centenares de VMs/contenedores en producción, migraciones desde hipervisores propietarios hacia soluciones open source, despliegue de IDS/IPS, WAF, firewalls iptables/nftables, y desarrollo de plataformas críticas adquiridas por empresas nacionales.
 
 [DevOps / SysAdmin]
 - Automatización: Ansible, Terraform, Pulumi, CloudFormation, AWX
@@ -30,6 +32,15 @@ Complementa su perfil backend con sólida trayectoria en arquitectura de infraes
 - Auditorías: CIS Controls, OWASP, NIST
 - Respuesta a incidentes y hardening de sistemas
 - Segmentación de red, NAT, rate limiting, bloqueo geográfico
+
+[Computer Vision & IA para video]
+- Detección y segmentación de objetos: YOLOv8/v11, SAM2, modelos custom entrenados desde cero
+- OCR y extracción de texto: PaddleOCR, Tesseract, validación de formato de patentes y matrículas
+- Procesamiento de video y streaming: FFmpeg, GStreamer, MediaMTX, HLS, RTSP/RTMP, VOD
+- Inferencia acelerada: ONNX Runtime GPU, TensorRT, CUDA, despliegue en edge y servidor
+- Mejora y restauración de video: Real-ESRGAN, DnCNN, ESPCN, denoising y super-resolución
+- Visión térmica y biespectral: OpenCV, análisis de anomalías térmicas en infraestructura crítica
+- Aplicaciones recientes: monitoreo ferroviario, pistas de aterrizaje forestales, lectura de patentes, control de calidad broadcast, cumplimiento de EPP
 
 [Backend Developer]
 - Lenguajes: Python, Go, Bash, Perl; competente en C, C++, Rust
@@ -134,7 +145,7 @@ Red de +30 servidores para streaming VOD/Live. Clientes: Canal 13, CHV, Mega. So
 - Director en Zaterio Kick-Ass Systems (2008 – 2010).
 
 [Habilidades Técnicas Senior]
-Python Go Bash Django FastAPI PostgreSQL MongoDB Redis Docker Kubernetes Ansible Terraform Proxmox Ceph Suricata Snort ModSecurity iptables nftables Zeek ELK Prometheus Grafana AWS Azure GCP Spark Airflow TensorFlow PyTorch
+Python Go Bash Django FastAPI PostgreSQL MongoDB Redis Docker Kubernetes Ansible Terraform Proxmox Ceph Suricata Snort ModSecurity iptables nftables Zeek ELK Prometheus Grafana AWS Azure GCP Spark Airflow TensorFlow PyTorch OpenCV YOLO ONNX TensorRT PaddleOCR FFmpeg GStreamer
 
 + Análisis de datos (Pandas, NumPy, Matplotlib, SciPy), computo distribuido, DBA relacional/NoSQL, liderazgo técnico, mentoría y code reviews.
 
