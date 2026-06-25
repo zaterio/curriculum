@@ -100,19 +100,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             box-sizing: border-box;
         }}
 
-        .container::after {{
-            content: "[ ENCRYPTED_TRANSMISSION :: TOP CLEARANCE ]";
-            position: absolute;
-            top: 4px;
-            right: 12px;
-            background: var(--bg);
-            color: var(--red);
-            font-size: 6.5pt;
-            padding: 0 8px;
-            border: 1px solid var(--red);
-            letter-spacing: 1px;
-        }}
-
         header {{
             text-align: center;
             border-bottom: 2px solid var(--green);
@@ -120,15 +107,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             margin-bottom: 18px;
             position: relative;
             page-break-inside: avoid;
-        }}
-
-        .ascii-art {{
-            color: var(--green-dim);
-            font-size: 6pt;
-            line-height: 1.15;
-            margin-bottom: 8px;
-            white-space: pre;
-            text-align: center;
         }}
 
         h1 {{
@@ -335,13 +313,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <body>
     <div class="container">
         <header>
-            <div class="ascii-art">
-    ____       _     _           _     
-   |  _ \\  ___| | __| |_ __ _ __| |_  
-   | | | |/ _ \\ |/ _` | '__| '__| __| 
-   | |_| |  __/ | (_| | |  | |  | |_  
-   |____/ \\___|_|\\__,_|_|  |_|   \\__| 
-            </div>
             <h1>{nombre}</h1>
             <div class="handle">// {titulo} //</div>
             <div class="contact">
