@@ -150,6 +150,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             color: var(--green-dim);
         }}
 
+        .repo {{
+            color: var(--green-dim);
+            font-size: 7.5pt;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }}
+
+        .repo a {{
+            color: var(--cyan);
+            text-decoration: none;
+        }}
+
         h2 {{
             color: var(--green);
             font-size: 11pt;
@@ -323,6 +335,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div class="contact">
                 {email} <span>//</span> {experiencia} <span>//</span> {ubicacion}
             </div>
+            <div class="repo">
+                [INFO] Este CV se actualiza a diario desde: <a href="{repo}">{repo}</a>
+            </div>
         </header>
 
         {contenido}
@@ -351,6 +366,7 @@ def parse_cv_data(filepath):
         "email": "",
         "experiencia": "",
         "ubicacion": "",
+        "repo": "",
         "secciones": []
     }
 
@@ -592,6 +608,7 @@ def render_html(data):
         email=html_escape(data.get("email", "")),
         experiencia=html_escape(data.get("experiencia", "")),
         ubicacion=html_escape(data.get("ubicacion", "")),
+        repo=html_escape(data.get("repo", "")),
         contenido=contenido
     )
 

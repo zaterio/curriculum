@@ -3,6 +3,7 @@
 @email daniel.ortiz@zka.cl
 @experiencia +15 años de experiencia
 @ubicacion Chile
+@repo https://github.com/zaterio/curriculum
 
 [Perfil Ejecutivo]
 Profesional senior informático con **alta experiencia en Python, Django y Go**, respaldada por más de @experiencia diseñando, construyendo y escalando aplicaciones backend robustas, seguras y de alto rendimiento. Especialista en el ecosistema Python/Django (REST APIs, microservicios, arquitecturas limpias) y en Go para servicios de alta concurrencia, baja latencia y herramientas de infraestructura.
