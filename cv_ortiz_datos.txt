@@ -143,6 +143,16 @@ Python Go Bash Django FastAPI PostgreSQL MongoDB Redis Docker Kubernetes Ansible
 - Frontend básico: HTML, CSS, JavaScript para colaboración en maquetación y consumo de APIs.
 - Disponibilidad para proyectos de alta complejidad y operación crítica.
 
+[Soft Skills]
+- Generación de herramientas faltantes en el grupo de trabajo para optimizar procesos internos y contar con métricas de rendimiento (ticketing, SLAs).
+- Mantención permanente de un diálogo técnico constructivo, afianzando que el equipo se mantenga alineado y colaborativo.
+- Compromiso con la mejora continua de procesos como parte vital del negocio.
+- Perfeccionamiento desde la base del mutuo entendimiento entre áreas técnicas y de negocio.
+- Evangelización de prácticas certificadas, standard y viables desde un punto de vista de seguridad.
+
+[Idiomas]
+- Inglés (Fluent Speaker)
+
 [Referencias]
 # David Morales Vidal
 > Key Account Manager, IT Ingeniería Ltda.

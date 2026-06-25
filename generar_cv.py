@@ -22,8 +22,15 @@ from html import escape
 # ---------------------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "cv_ortiz_datos.txt")
+
+# Versión hacker/terminal
 HTML_FILE = os.path.join(BASE_DIR, "cv_ortiz_hacker.html")
 PDF_FILE = os.path.join(BASE_DIR, "cv_ortiz_hacker.pdf")
+
+# Versión imprimible limpia
+PRINTABLE_HTML_FILE = os.path.join(BASE_DIR, "cv_ortiz_printable.html")
+PRINTABLE_PDF_FILE = os.path.join(BASE_DIR, "cv_ortiz_printable.pdf")
+PRINTABLE_PDF_URL = "https://github.com/zaterio/curriculum/raw/main/cv_ortiz_printable.pdf"
 
 # ---------------------------------------------------------------------------
 # PLANTILLA HTML CON ESTILO HACKER
@@ -56,7 +63,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         @page {{
             size: A4;
-            margin: 12mm;
+            margin: 0;
         }}
 
         body {{
@@ -65,10 +72,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             color: var(--text);
             line-height: 1.5;
             font-size: 8.8pt;
-            padding: 0;
+            padding: 10mm;
             margin: 0;
             position: relative;
             min-height: 100vh;
+            box-sizing: border-box;
         }}
 
         body::before {{
@@ -90,7 +98,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }}
 
         .container {{
-            max-width: 186mm;
+            width: 100%;
+            max-width: 190mm;
             margin: 0 auto;
             border: 1px solid var(--border);
             background: var(--bg-card);
@@ -297,8 +306,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         @media print {{
             body {{
-                padding: 0;
+                padding: 10mm;
                 background: var(--bg);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }}
             body::before {{
                 display: none;
@@ -319,7 +330,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 {email} <span>//</span> {experiencia} <span>//</span> {ubicacion}
             </div>
             <div class="repo">
-                [INFO] Este CV se actualiza a diario desde: <a href="{repo}">{repo}</a>
+                [INFO] Este CV se actualiza ha diario desde mi contexto profesional, y se encuentra disponible en: <a href="https://gitguh.com/zaterio/curriculum">https://gitguh.com/zaterio/curriculum</a><br>
+                [INFO] Curriculum imprimible en: <a href="{printable_url}">{printable_url}</a>
             </div>
         </header>
 
@@ -327,6 +339,232 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         <div class="status-line">
             [EOF] {email} // root@ortiz:~$ _<span class="blink">&#9608;</span>
+        </div>
+    </div>
+</body>
+</html>"""
+
+# ---------------------------------------------------------------------------
+# PLANTILLA HTML IMPRIMIBLE / PROFESIONAL
+# ---------------------------------------------------------------------------
+PRINTABLE_TEMPLATE = """<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{nombre} - Curriculum Vitae</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @page {{
+            size: A4;
+            margin: 15mm;
+        }}
+
+        * {{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }}
+
+        body {{
+            font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #222222;
+            line-height: 1.45;
+            font-size: 9.5pt;
+            padding: 0;
+            margin: 0;
+        }}
+
+        .container {{
+            max-width: 180mm;
+            margin: 0 auto;
+            padding: 0;
+        }}
+
+        header {{
+            text-align: center;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 14px;
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+        }}
+
+        h1 {{
+            color: #1a1a1a;
+            font-size: 24pt;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }}
+
+        .handle {{
+            color: #444444;
+            font-size: 10.5pt;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }}
+
+        .contact {{
+            color: #333333;
+            font-size: 9pt;
+            margin-bottom: 6px;
+        }}
+
+        .contact span {{
+            margin: 0 8px;
+            color: #888888;
+        }}
+
+        .repo {{
+            color: #555555;
+            font-size: 7.5pt;
+            margin-top: 6px;
+        }}
+
+        .repo a {{
+            color: #0066cc;
+            text-decoration: none;
+        }}
+
+        h2 {{
+            color: #1a1a1a;
+            font-size: 11pt;
+            border-left: 4px solid #0066cc;
+            padding-left: 10px;
+            margin: 18px 0 8px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            page-break-after: avoid;
+        }}
+
+        h3 {{
+            color: #0066cc;
+            font-size: 10pt;
+            margin: 12px 0 4px 0;
+        }}
+
+        p {{
+            margin-bottom: 8px;
+            text-align: justify;
+        }}
+
+        .section {{
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }}
+
+        ul {{
+            list-style: none;
+            padding-left: 0;
+        }}
+
+        ul li {{
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 3px;
+        }}
+
+        ul li::before {{
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0066cc;
+        }}
+
+        .two-col {{
+            display: flex;
+            gap: 18px;
+        }}
+
+        .col {{
+            flex: 1;
+        }}
+
+        .skill-tag {{
+            display: inline-block;
+            border: 1px solid #cccccc;
+            color: #333333;
+            padding: 2px 7px;
+            margin: 2px;
+            font-size: 7.5pt;
+            background: #f5f5f5;
+        }}
+
+        .project {{
+            margin-bottom: 10px;
+            border-left: 2px solid #0066cc;
+            padding-left: 10px;
+            page-break-inside: avoid;
+        }}
+
+        .project-title {{
+            color: #1a1a1a;
+            font-weight: 700;
+        }}
+
+        .project-meta {{
+            color: #666666;
+            font-size: 8pt;
+            font-style: italic;
+        }}
+
+        .ref-grid {{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 7.5pt;
+        }}
+
+        .ref-item {{
+            border: 1px solid #dddddd;
+            padding: 6px;
+            background: #fafafa;
+            page-break-inside: avoid;
+        }}
+
+        .ref-name {{
+            color: #0066cc;
+            font-weight: 700;
+        }}
+
+        .status-line {{
+            border-top: 1px solid #dddddd;
+            margin-top: 18px;
+            padding-top: 8px;
+            font-size: 7pt;
+            color: #888888;
+            text-align: center;
+        }}
+
+        .highlight {{
+            color: #0066cc;
+            font-weight: 500;
+        }}
+
+        .dim {{
+            color: #666666;
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{nombre}</h1>
+            <div class="handle">{titulo}</div>
+            <div class="contact">
+                {email} <span>|</span> {experiencia} <span>|</span> {ubicacion}
+            </div>
+            <div class="repo">
+                Curriculum actualizado desde: <a href="{repo}">{repo}</a>
+            </div>
+        </header>
+
+        {contenido}
+
+        <div class="status-line">
+            {email}
         </div>
     </div>
 </body>
@@ -592,6 +830,24 @@ def render_html(data):
         experiencia=html_escape(data.get("experiencia", "")),
         ubicacion=html_escape(data.get("ubicacion", "")),
         repo=html_escape(data.get("repo", "")),
+        printable_url=html_escape(PRINTABLE_PDF_URL),
+        contenido=contenido
+    )
+
+
+def render_printable_html(data):
+    """Genera el HTML de la versión imprimible/profesional."""
+    contenido = ""
+    for section in data["secciones"]:
+        contenido += render_seccion(section)
+
+    return PRINTABLE_TEMPLATE.format(
+        nombre=html_escape(data.get("nombre", "")),
+        titulo=html_escape(data.get("titulo", "")),
+        email=html_escape(data.get("email", "")),
+        experiencia=html_escape(data.get("experiencia", "")),
+        ubicacion=html_escape(data.get("ubicacion", "")),
+        repo=html_escape(data.get("repo", "")),
         contenido=contenido
     )
 
@@ -633,6 +889,7 @@ def main():
     print(f"Leyendo datos desde: {DATA_FILE}")
     data = parse_cv_data(DATA_FILE)
 
+    # Versión hacker/terminal
     print(f"Generando HTML: {HTML_FILE}")
     html = render_html(data)
     with open(HTML_FILE, "w", encoding="utf-8") as f:
@@ -641,9 +898,20 @@ def main():
     if not generate_pdf(HTML_FILE, PDF_FILE):
         sys.exit(1)
 
+    # Versión imprimible/profesional
+    print(f"Generando HTML imprimible: {PRINTABLE_HTML_FILE}")
+    printable_html = render_printable_html(data)
+    with open(PRINTABLE_HTML_FILE, "w", encoding="utf-8") as f:
+        f.write(printable_html)
+
+    if not generate_pdf(PRINTABLE_HTML_FILE, PRINTABLE_PDF_FILE):
+        sys.exit(1)
+
     print(f"\n✓ CV generado con éxito:")
-    print(f"  HTML: {HTML_FILE}")
-    print(f"  PDF:  {PDF_FILE}")
+    print(f"  HTML:        {HTML_FILE}")
+    print(f"  PDF:         {PDF_FILE}")
+    print(f"  HTML print:  {PRINTABLE_HTML_FILE}")
+    print(f"  PDF print:   {PRINTABLE_PDF_FILE}")
 
 
 if __name__ == "__main__":
