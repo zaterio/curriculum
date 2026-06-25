@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Ortiz // CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --bg-card: #0a0f0a;
+            --green: #00ff41;
+            --green-dim: #00aa2a;
+            --cyan: #00ffff;
+            --amber: #ffb000;
+            --red: #ff2a2a;
+            --text: #d0ffd8;
+            --border: #003300;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.55;
+            font-size: 9pt;
+            padding: 30px;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 255, 65, 0.03),
+                rgba(0, 255, 65, 0.03) 1px,
+                transparent 1px,
+                transparent 3px
+            );
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            padding: 28px;
+            box-shadow: 0 0 25px rgba(0, 255, 65, 0.15), inset 0 0 40px rgba(0, 255, 65, 0.03);
+            position: relative;
+        }
+
+        .container::after {
+            content: "[ ENCRYPTED_TRANSMISSION :: TOP CLEARANCE ]";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--bg);
+            color: var(--red);
+            font-size: 7pt;
+            padding: 0 10px;
+            border: 1px solid var(--red);
+            letter-spacing: 1px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--green);
+            padding-bottom: 18px;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .ascii-art {
+            color: var(--green-dim);
+            font-size: 6.5pt;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            white-space: pre;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--green);
+            font-size: 26pt;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
+            letter-spacing: 3px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .handle {
+            color: var(--cyan);
+            font-size: 11pt;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            color: var(--text);
+            font-size: 9pt;
+        }
+
+        .contact span {
+            margin: 0 8px;
+            color: var(--green-dim);
+        }
+
+        h2 {
+            color: var(--green);
+            font-size: 11pt;
+            border-left: 4px solid var(--green);
+            padding-left: 10px;
+            margin: 20px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+
+        h2::before {
+            content: "root@ortiz:~$ ";
+            color: var(--cyan);
+            margin-right: 8px;
+            font-size: 10pt;
+        }
+
+        h3 {
+            color: var(--cyan);
+            font-size: 10pt;
+            margin: 14px 0 6px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: "> ";
+            color: var(--green);
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .section {
+            margin-bottom: 18px;
+            border: 1px solid var(--border);
+            padding: 14px;
+            background: rgba(0, 20, 0, 0.3);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 4px;
+        }
+
+        ul li::before {
+            content: "[+]";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-size: 8pt;
+        }
+
+        .two-col {
+            display: flex;
+            gap: 20px;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            border: 1px solid var(--green-dim);
+            color: var(--green);
+            padding: 2px 8px;
+            margin: 2px;
+            font-size: 7.5pt;
+            background: rgba(0, 255, 65, 0.05);
+        }
+
+        .project {
+            margin-bottom: 12px;
+            border-left: 2px solid var(--cyan);
+            padding-left: 10px;
+        }
+
+        .project-title {
+            color: var(--amber);
+            font-weight: 600;
+        }
+
+        .project-meta {
+            color: var(--green-dim);
+            font-size: 8pt;
+        }
+
+        .ref-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 7.5pt;
+        }
+
+        .ref-item {
+            border: 1px solid var(--border);
+            padding: 6px;
+            background: rgba(0, 30, 0, 0.3);
+        }
+
+        .ref-name {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        .status-line {
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+            padding-top: 8px;
+            font-size: 7pt;
+            color: var(--green-dim);
+            text-align: center;
+        }
+
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .highlight {
+            color: var(--amber);
+        }
+
+        .dim {
+            color: var(--green-dim);
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: var(--bg);
+            }
+            body::before {
+                display: none;
+            }
+            .container {
+                box-shadow: none;
+                border: 1px solid var(--border);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="ascii-art">
+    ____       _     _           _     
+   |  _ \  ___| | __| |_ __ _ __| |_  
+   | | | |/ _ \ |/ _` | '__| '__| __| 
+   | |_| |  __/ | (_| | |  | |  | |_  
+   |____/ \___|_|\__,_|_|  |_|   \__| 
+            </div>
+            <h1>Daniel Ortiz</h1>
+            <div class="handle">// Senior DevOps | SysAdmin | Backend | CyberSec //</div>
+            <div class="contact">
+                daniel.ortiz@zka.cl <span>//</span> +15 años de experiencia <span>//</span> Chile
+            </div>
+        </header>
+
+        <div class="section">
+    <h2>Perfil Ejecutivo</h2>
+<p>Profesional senior informático con más de +15 años de experiencia en arquitectura de infraestructura, automatización, desarrollo backend y ciberseguridad defensiva. Especialista en entornos Linux, virtualización con Proxmox, orquestación de contenedores, pipelines CI/CD y seguridad de redes.</p>
+<p>Trayectoria respaldada por la gestión de centenares de VMs/contenedores en producción, migraciones desde hipervisores propietarios hacia soluciones open source, despliegue de IDS/IPS con Suricata/Snort, WAF open source, firewalls iptables/nftables, y desarrollo de plataformas críticas adquiridas por empresas nacionales.</p>
+</div>
+<div class="section">
+    <h2>DevOps / SysAdmin</h2>
+    <ul>
+        <li>Automatización: Ansible, Terraform, Pulumi, CloudFormation, AWX</li>
+        <li>CI/CD: GitHub Actions, GitLab CI, Jenkins, ArgoCD, Azure DevOps</li>
+        <li>Contenedores: Docker, Kubernetes, LXC, Helm</li>
+        <li>Cloud: AWS, Azure, GCP, serverless, cost optimization</li>
+        <li>Virtualización: Proxmox VE, Ceph, ZFS, KVM, cloud-init</li>
+        <li>Linux: Debian, Ubuntu, RHEL/CentOS, Rocky, AlmaLinux</li>
+        <li>Redes: VLANs, VXLAN, OVS, SDN, VPN, LB, DNS, CDN</li>
+        <li>Observabilidad: Prometheus, Grafana, ELK, Loki, Zabbix</li>
+        <li>Seguridad: Vault, IAM, Zero Trust, RBAC, TLS/SSL</li>
+    </ul>
+</div>
+<div class="section">
+    <h2>Ciberseguridad</h2>
+    <ul>
+        <li>IDS/IPS: Suricata, Snort, Zeek con reglas propias y de comunidad</li>
+        <li>Firewalls: iptables, nftables, pfSense, OPNsense</li>
+        <li>WAF: ModSecurity + OWASP CRS, Coraza, BunkerWeb</li>
+        <li>Análisis de red: Wireshark, tcpdump, ELK, Wazuh, Graylog</li>
+        <li>Vulnerabilidades: OpenVAS, Nessus, Nmap, Nikto</li>
+        <li>Auditorías: CIS Controls, OWASP, NIST</li>
+        <li>Respuesta a incidentes y hardening de sistemas</li>
+        <li>Segmentación de red, NAT, rate limiting, bloqueo geográfico</li>
+    </ul>
+</div>
+<div class="section">
+    <h2>Backend Developer</h2>
+    <ul>
+        <li>Lenguajes: Python, Go, Bash, Perl; competente en C, C++, Rust</li>
+        <li>Frameworks: Django, DRF, FastAPI, Flask</li>
+        <li>APIs: REST, gRPC, GraphQL, OpenAPI/Swagger</li>
+        <li>Arquitectura: microservicios, hexagonal, clean, event-driven</li>
+        <li>Bases de datos: PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch</li>
+        <li>Mensajería: RabbitMQ, Kafka, Redis Pub/Sub, Celery</li>
+        <li>Testing: pytest, unittest, Go testing, TDD</li>
+        <li>Seguridad: JWT/OAuth, gestión de secretos, Vault</li>
+    </ul>
+</div>
+<div class="section">
+    <h2>Proyectos Destacados</h2>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">PaaS Neutralidad en la Red</div>
+                <div class="project-meta">2022 // GrupoZ // Clientes: GTD Internet, Telefónica del Sur, Claro</div>
+                <p>Sondas distribuidas en redes ISP generan ~5 TB/año de datos, analizados vía GPU para cumplimiento SUBTEL Decreto 368/11. Automatización de procesos regulatorios.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">PaaS QoE</div>
+                <div class="project-meta">2022 // GrupoZ // Clientes: GTD, Telefónica del Sur</div>
+                <p>Evaluación de experiencia de usuario en móviles y desktops. Dashboards de monitorización NOC para detección de cambios topológicos y degradación de servicio.</p>
+            </div>
+                    </div>
+    </div>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Video Quality Control</div>
+                <div class="project-meta">2023 // GrupoZ // Cliente: Canal 13</div>
+                <p>Hardware de adquisición de video multi-fuente con análisis por machine learning en GPU. Detección parametrizable de anomalías y enrutamiento a flujos de edición/publicación.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Sonic Transcoder</div>
+                <div class="project-meta">2023 // GrupoZ // Cliente: Canal 13</div>
+                <p>Actualización de hardware especializado de transcodificación acelerada por GPU. Automatización de nuevos flujos de ingesta y transcodificación según metadata.</p>
+            </div>
+                    </div>
+    </div>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">STX360</div>
+                <div class="project-meta">2024 // GrupoZ</div>
+                <p>PaaS para certificación de instalaciones FTTH. Validación de parámetros de red y emisión de certificado de alta del servicio contratado.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">MMF - Inteligencia de Mercado Farmacéutico</div>
+                <div class="project-meta">2023 // Pharmaintel / Tecnilex</div>
+                <p>Plataforma de inteligencia de negocio que consolida datos públicos y privados para generar alertas sobre tendencias de precios, stock, fusiones y nuevos productos.</p>
+            </div>
+                    </div>
+    </div>
+</div>
+<div class="section">
+    <h2>Proyectos Recientes (últimos 2 años)</h2>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">4K-IA Transcoder</div>
+                <div class="project-meta">2024-2025 // Pipeline propio</div>
+                <p>Pipeline de transcodificación y mejora de video en vivo con IA: denoising DnCNN, super-resolución ESPCN y Real-ESRGAN, orquestado con FFmpeg + ONNX Runtime GPU + Ansible.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Claro Box Monit</div>
+                <div class="project-meta">2024-2025 // Claro</div>
+                <p>Sistema Django + Celery + RabbitMQ + Ansible para monitoreo y gestión remota de rigs/equipos de campo. Auto-registro por MAC, tareas periódicas por queue AMQP y API REST.</p>
+            </div>
+                    </div>
+    </div>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">CROAL - Lectura de Patentes</div>
+                <div class="project-meta">2024-2025 // ARAUCO Chile</div>
+                <p>Sistema de video-análisis en tiempo real: detección de camiones con YOLOv11, OCR de patentes con PaddleOCR, dashboard HLS, API FastAPI y despliegue con Ansible.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Forest Landing Strip</div>
+                <div class="project-meta">2024-2025 // ARAUCO Chile</div>
+                <p>Backend Django/Celery para monitoreo de pistas de aterrizaje forestales: detección de aeronaves con YOLO, OCR de registros, verificación de EPP (casco/chaleco) y reportes operacionales.</p>
+            </div>
+                    </div>
+    </div>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Arauco Models</div>
+                <div class="project-meta">2024-2025 // ARAUCO Chile</div>
+                <p>Entrenamiento de modelos YOLO/SAM2 para detectar aeronaves, personas y EPPs en videos de pistas de aterrizaje.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">MediaMTX Deploy</div>
+                <div class="project-meta">2024-2025 // Infraestructura propia</div>
+                <p>Playbooks Ansible para deploy de servidor RTSP/RTMP MediaMTX con soporte VOD, publicación remota y aceleración NVIDIA/VAAPI.</p>
+            </div>
+                    </div>
+    </div>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Modelo Trenes</div>
+                <div class="project-meta">2024-2025 // Industria forestal</div>
+                <p>Entrenamiento YOLO11 para clasificar vagones forestales cargados/vacíos y locomotoras desde cámaras laterales.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Trenes Tags</div>
+                <div class="project-meta">2024-2025 // Industria forestal</div>
+                <p>Pipeline de pre-procesamiento de videos ferroviarios: extracción de frames, deduplicación y generación automática de etiquetas YOLO para Roboflow.</p>
+            </div>
+                    </div>
+    </div>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Dell 5548 Automation</div>
+                <div class="project-meta">2024-2025 // Infraestructura propia</div>
+                <p>Automatización Ansible + Python/pexpect para configurar switches Dell PowerConnect 5548: VLANs, trunk/general y backups.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">DevOps IaC</div>
+                <div class="project-meta">2024-2025 // Infraestructura propia</div>
+                <p>Playbooks Ansible para aprovisionamiento de servidores, hardening, monitoreo Zabbix, PostgreSQL, RabbitMQ, OPNsense y nginx.</p>
+            </div>
+                    </div>
+    </div>
+    <div class="project">
+    <div class="project-title">FELIX - Nutrición Hospitalaria</div>
+    <div class="project-meta">2024-2025 // Sector salud</div>
+    <p>Pipeline ETL con Python/Pandas/Excel que consolida y normaliza planillas de nutrición hospitalaria y avisos SIC, aplicando matching difuso de nombres y criterios clínicos para reportes anuales.</p>
+</div>
+</div>
+<div class="section">
+    <h2>Otros Desarrollos Relevantes</h2>
+    <div class="two-col">
+        <div class="col">
+            <div class="project">
+                <div class="project-title">VMS - Video Media System</div>
+                <div class="project-meta">2018 // GrupoZ // Cliente: Banca Nacional</div>
+                <p>Plataforma de transcodificación, gestión y almacenamiento de contenido VOD.</p>
+            </div>
+                    </div>
+        <div class="col">
+            <div class="project">
+                <div class="project-title">Primera CDN Nacional</div>
+                <div class="project-meta">2012 // GrupoZ</div>
+                <p>Red de +30 servidores para streaming VOD/Live. Clientes: Canal 13, CHV, Mega. Soportó eventos de alta demanda como mundiales y Festival de Viña.</p>
+            </div>
+                    </div>
+    </div>
+</div>
+<div class="section">
+    <h2>Habilidades Técnicas Senior</h2>
+    <div style="margin-bottom: 8px;">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Go</span>
+        <span class="skill-tag">Bash</span>
+        <span class="skill-tag">Django</span>
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Redis</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Kubernetes</span>
+        <span class="skill-tag">Ansible</span>
+        <span class="skill-tag">Terraform</span>
+        <span class="skill-tag">Proxmox</span>
+        <span class="skill-tag">Ceph</span>
+        <span class="skill-tag">Suricata</span>
+        <span class="skill-tag">Snort</span>
+        <span class="skill-tag">ModSecurity</span>
+        <span class="skill-tag">iptables</span>
+        <span class="skill-tag">nftables</span>
+        <span class="skill-tag">Zeek</span>
+        <span class="skill-tag">ELK</span>
+        <span class="skill-tag">Prometheus</span>
+        <span class="skill-tag">Grafana</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">Azure</span>
+        <span class="skill-tag">GCP</span>
+        <span class="skill-tag">Spark</span>
+        <span class="skill-tag">Airflow</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">PyTorch</span>
+    </div>
+    <p class="dim" style="font-size: 8pt; margin-top: 8px;">+ Análisis de datos (Pandas, NumPy, Matplotlib, SciPy), computo distribuido, DBA relacional/NoSQL, liderazgo técnico, mentoría y code reviews.</p>
+</div>
+<div class="section">
+    <h2>Otras Capacidades</h2>
+    <ul>
+        <li>Infraestructura propia: servidores de última generación en datacenter TIER3 (GTD Lidice2), conectados a redes 40 Gbps.</li>
+        <li>Frontend básico: HTML, CSS, JavaScript para colaboración en maquetación y consumo de APIs.</li>
+        <li>Disponibilidad para proyectos de alta complejidad y operación crítica.</li>
+    </ul>
+</div>
+<div class="section">
+    <h2>Referencias</h2>
+    <div class="ref-grid">
+        <div class="ref-item">
+            <div class="ref-name">Iván Eyara Martin</div>
+            Subgerente desarrollo multiplataforma, Canal 13<br>
+            ieyara@13.cl | 226302665
+        </div>
+        <div class="ref-item">
+            <div class="ref-name">Juan Carlos Aguirre Melo</div>
+            Jefe de desarrollo Ingeniería, Canal 13<br>
+            jcaguirre@13.cl | 22514000
+        </div>
+        <div class="ref-item">
+            <div class="ref-name">Saúl Parra Paredes</div>
+            Supervisor emisión y continuidad, Canal 13<br>
+            sparra@13.cl | 226302277
+        </div>
+        <div class="ref-item">
+            <div class="ref-name">Raúl Soto Cristi</div>
+            CEO Tecnilex S.A.<br>
+            rsoto@tecnilex.cl | 223684529
+        </div>
+        <div class="ref-item">
+            <div class="ref-name">Christian Avalos</div>
+            CEO GrupoZ<br>
+            cavalos@grupoz.cl | 222474870
+        </div>
+        <div class="ref-item">
+            <div class="ref-name">Erik Luengo Liquitay</div>
+            Marketing &amp; Sales Manager, Bureau Veritas Chile<br>
+            erik.luengo@bureauveritas.com | 24859000
+        </div>
+        <div class="ref-item">
+            <div class="ref-name">Oscar Huenchual Iturriaga</div>
+            Gerente área regulatoria, Grupo GTD<br>
+            ohuenchual@grupogtd.com
+        </div>
+        <div class="ref-item">
+            <div class="ref-name">Carlos Andrés Villaseca Miranda</div>
+            Ingeniero Operaciones Internet, Grupo GTD<br>
+            (+56) 9 96751732
+        </div>
+    </div>
+</div>
+
+
+        <div class="status-line">
+            [EOF] daniel.ortiz@zka.cl // root@ortiz:~$ _<span class="blink">&#9608;</span>
+        </div>
+    </div>
+</body>
+</html>
