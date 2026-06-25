@@ -134,6 +134,22 @@ Python Go Bash Django FastAPI PostgreSQL MongoDB Redis Docker Kubernetes Ansible
 - Disponibilidad para proyectos de alta complejidad y operación crítica.
 
 [Referencias]
+# David Morales Vidal
+> Key Account Manager, IT Ingeniería Ltda.
+david.morales@itingenieria.cl
+
+# Cesar Arismendi
+> Contacto técnico/operativo, IT Ingeniería Ltda.
+cesesarismendi@itingenieria.cl
+
+# Diego Sandoval
+> Contacto técnico/operativo, IT Ingeniería Ltda.
+diegosandoval@itingenieria.cl
+
+# Ignacio Figueroa
+> Contacto técnico/operativo, IT Ingeniería Ltda.
+ignaciofigueroa@itingenieria.cl
+
 # Iván Eyara Martin
 > Subgerente desarrollo multiplataforma, Canal 13
 ieyara@13.cl | 226302665
