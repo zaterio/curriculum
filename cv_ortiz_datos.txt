@@ -124,6 +124,15 @@ Plataforma de transcodificación, gestión y almacenamiento de contenido VOD.
 > 2012 // GrupoZ
 Red de +30 servidores para streaming VOD/Live. Clientes: Canal 13, CHV, Mega. Soportó eventos de alta demanda como mundiales y Festival de Viña.
 
+[Experiencia Laboral]
+- CIO (Chief Information Officer) en GrupoZ (2012 – Actualidad).
+- Director en Farmaintel LTDA.
+- Asesor externo en Bureau Veritas Chile.
+- Asesor externo en compañías farmacéuticas (Tecnilex Chile, Torregal Chile).
+- Gerente de Asuntos Regulatorios en Biotoscana Farma S.A. (2010 – 2012).
+- Coordinador de Asuntos Regulatorios en Bristol Myers Squibb (2008 – 2011).
+- Director en Zaterio Kick-Ass Systems (2008 – 2010).
+
 [Habilidades Técnicas Senior]
 Python Go Bash Django FastAPI PostgreSQL MongoDB Redis Docker Kubernetes Ansible Terraform Proxmox Ceph Suricata Snort ModSecurity iptables nftables Zeek ELK Prometheus Grafana AWS Azure GCP Spark Airflow TensorFlow PyTorch
 
@@ -198,6 +207,14 @@ ohuenchual@grupogtd.com
 # Carlos Andrés Villaseca Miranda
 > Ingeniero Operaciones Internet, Grupo GTD
 (+56) 9 96751732
+
+# Francisco Barañao
+> Gerente General, Sociedad Concesionaria Metropolitana de Salud
+fbaranao@scms.cl
+
+# Paulette Paniagua
+> Analista Financiero, Sociedad Concesionaria Metropolitana de Salud
+ppaniagua@scms.cl
 
 [Grados Académicos]
 - Químico, Universidad de Chile
