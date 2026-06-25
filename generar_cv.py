@@ -54,13 +54,19 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             box-sizing: border-box;
         }}
 
+        @page {{
+            size: A4;
+            margin: 12mm;
+        }}
+
         body {{
             font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
             background-color: var(--bg);
             color: var(--text);
-            line-height: 1.55;
-            font-size: 9pt;
-            padding: 30px;
+            line-height: 1.5;
+            font-size: 8.8pt;
+            padding: 0;
+            margin: 0;
             position: relative;
             min-height: 100vh;
         }}
@@ -84,24 +90,25 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }}
 
         .container {{
-            max-width: 210mm;
+            max-width: 186mm;
             margin: 0 auto;
             border: 1px solid var(--border);
             background: var(--bg-card);
-            padding: 28px;
+            padding: 18px 22px;
             box-shadow: 0 0 25px rgba(0, 255, 65, 0.15), inset 0 0 40px rgba(0, 255, 65, 0.03);
             position: relative;
+            box-sizing: border-box;
         }}
 
         .container::after {{
             content: "[ ENCRYPTED_TRANSMISSION :: TOP CLEARANCE ]";
             position: absolute;
-            top: -10px;
-            right: 20px;
+            top: 4px;
+            right: 12px;
             background: var(--bg);
             color: var(--red);
-            font-size: 7pt;
-            padding: 0 10px;
+            font-size: 6.5pt;
+            padding: 0 8px;
             border: 1px solid var(--red);
             letter-spacing: 1px;
         }}
@@ -109,40 +116,41 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         header {{
             text-align: center;
             border-bottom: 2px solid var(--green);
-            padding-bottom: 18px;
-            margin-bottom: 22px;
+            padding-bottom: 14px;
+            margin-bottom: 18px;
             position: relative;
+            page-break-inside: avoid;
         }}
 
         .ascii-art {{
             color: var(--green-dim);
-            font-size: 6.5pt;
-            line-height: 1.2;
-            margin-bottom: 12px;
+            font-size: 6pt;
+            line-height: 1.15;
+            margin-bottom: 8px;
             white-space: pre;
             text-align: center;
         }}
 
         h1 {{
             color: var(--green);
-            font-size: 26pt;
+            font-size: 24pt;
             font-weight: 700;
             text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
             letter-spacing: 3px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             text-transform: uppercase;
         }}
 
         .handle {{
             color: var(--cyan);
-            font-size: 11pt;
+            font-size: 10pt;
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }}
 
         .contact {{
             color: var(--text);
-            font-size: 9pt;
+            font-size: 8.5pt;
         }}
 
         .contact span {{
@@ -164,16 +172,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         h2 {{
             color: var(--green);
-            font-size: 11pt;
+            font-size: 10.5pt;
             border-left: 4px solid var(--green);
             padding-left: 10px;
-            margin: 20px 0 10px 0;
+            margin: 16px 0 8px 0;
             text-transform: uppercase;
             letter-spacing: 1.2px;
             display: flex;
             align-items: center;
             flex-wrap: nowrap;
             white-space: nowrap;
+            page-break-after: avoid;
         }}
 
         h2::before {{
@@ -202,10 +211,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }}
 
         .section {{
-            margin-bottom: 18px;
+            margin-bottom: 14px;
             border: 1px solid var(--border);
-            padding: 14px;
+            padding: 12px;
             background: rgba(0, 20, 0, 0.3);
+            page-break-inside: avoid;
         }}
 
         ul {{
@@ -247,9 +257,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }}
 
         .project {{
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             border-left: 2px solid var(--cyan);
             padding-left: 10px;
+            page-break-inside: avoid;
         }}
 
         .project-title {{
@@ -273,6 +284,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border: 1px solid var(--border);
             padding: 6px;
             background: rgba(0, 30, 0, 0.3);
+            page-break-inside: avoid;
         }}
 
         .ref-name {{
